@@ -1,7 +1,3 @@
----
-title: "Privacy Policy — DeepCheck"
----
-
 # Privacy Policy — DeepCheck
 
 **Effective date:** June 11, 2026
