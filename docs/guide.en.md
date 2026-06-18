@@ -18,11 +18,12 @@ This guide explains how to use the app and run the tests.
 6. [CPU stress test](#cpu-stress-test)
 7. [RAM test](#ram-test)
 8. [Storage test](#storage-test)
-9. [The "About device" section](#the-about-device-section)
-10. [Settings](#settings)
-11. [Pro version and free-mode limits](#pro-version-and-free-mode-limits)
-12. [Permissions](#permissions)
-13. [FAQ](#faq)
+9. [GPU test](#gpu-test)
+10. [The "About device" section](#the-about-device-section)
+11. [Settings](#settings)
+12. [Pro version and free-mode limits](#pro-version-and-free-mode-limits)
+13. [Permissions](#permissions)
+14. [FAQ](#faq)
 
 ---
 
@@ -174,6 +175,25 @@ A storage speed benchmark: it measures real read and write speeds.
 **Clarifying the USB drive version.** When you connect an external drive, the app may offer to grant access to the USB device in order to tell a USB 3.0 drive from a USB 2.0 one when it's plugged into the phone's USB 2.0 port. This is optional — the test will start either way, but the detected specs will be less precise.
 
 > Keep in mind: the real speed may be limited by the device's USB port rather than by the drive.
+
+---
+
+## GPU test
+
+A graphics benchmark for comparing the power of devices using clear metrics — **GFLOPS** and **FPS**.
+
+The run has two steps:
+
+1. **GFLOPS** — the GPU's compute performance, measured with a pure compute workload.
+2. **Three graphics scenes** — each rendered at a fixed Full HD resolution on every device (so the FPS is comparable between them):
+   - **Pixels** — a heavy pixel shader;
+   - **Geometry** — many rotating 3D objects (vertex-processing load);
+   - **Textures** — multi-layer rendering with texture sampling (memory-bandwidth load).
+
+When it finishes you'll see GFLOPS and the average FPS for each of the three scenes, plus the GPU temperature.
+
+> The more powerful the GPU, the higher the GFLOPS and FPS. Results are comparable across devices, but a single synthetic test can't perfectly rank different architectures (e.g. Adreno vs Mali) — that's normal for any benchmark.
+> On weak devices the interface may stutter during the run because of the high fixed resolution — this does not affect the measurement itself.
 
 ---
 
