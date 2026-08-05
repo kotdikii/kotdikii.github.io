@@ -2,8 +2,6 @@
 title: "Privacy Policy — Seriary"
 ---
 
-# Privacy Policy — Seriary
-
 **Effective date:** August 4, 2026
 
 Seriary is an app that picks a random episode from your favourite TV shows and helps you open it in a streaming service. This policy explains what data the app uses and how it is handled.
@@ -55,12 +53,11 @@ A backup is a single file into which the app writes your library: shows, seasons
 
 **Saving to a file.** You choose the location through the system dialog; the app does not remember the path and has no access to any of your other files.
 
-**Saving to the cloud (optional).** Yandex Disk and Google Drive are supported. Sign-in happens on the service's own official page; **the app never sees or stores your password**. The minimum possible scopes are requested:
+**Saving to the cloud (optional).** Yandex Disk are supported. Sign-in happens on the service's own official page; **the app never sees or stores your password**. The minimum possible scopes are requested:
 
-- Yandex Disk — `cloud_api:disk.app_folder`: access **only to the app's own folder** on your Disk;
-- Google Drive — `drive.appdata`: access **only to the app's hidden application-data folder**.
+- Yandex Disk — `cloud_api:disk.app_folder`: access **only to the app's own folder** on your Disk.
 
-Neither scope lets the app read the rest of your files, photos or documents — it cannot see them. The app does not request your login, name or email address in the cloud account. The access token issued by the service is kept in the app's private storage on your device and is removed together with the app. You can revoke access at any time in the security settings of your Yandex or Google account.
+This scope does not allow the application to read the rest of your files, photos or documents — it cannot see them. The application does not request your login, name, or email address in the cloud account. The app does not request your login, name or email address in the cloud account. The access token issued by the service is kept in the app's private storage on your device and is removed together with the app. You can revoke access at any time in the security settings of your Yandex account.
 
 **Android system backup** also applies: if it is enabled in your device settings, Android may copy the app's data to your cloud account under its own rules. That process is controlled by the operating system, not by the app.
 
