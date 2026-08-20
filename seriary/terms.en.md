@@ -4,7 +4,7 @@ title: "Terms of Use — Seriary"
 
 # Terms of Use — Seriary
 
-**Effective date:** August 4, 2026
+**Effective date:** August 20, 2026
 
 These Terms of Use ("Terms") govern your use of the Seriary application ("App"). By installing and using the App, you accept these Terms. If you do not agree with them, do not use the App.
 
@@ -17,6 +17,10 @@ Seriary helps you decide what to watch: it picks a random episode from the shows
 ## 2. License
 
 The developer grants you a limited, non-exclusive, non-transferable and revocable license to use the App for personal, non-commercial purposes on devices you own. The App is licensed, not sold.
+
+The App is published in two versions — for Android and for Windows. These Terms apply equally to both.
+
+The Android version is updated through the store you installed it from. **The Windows version has no built-in auto-update**: a new version is installed by downloading it and installing it over the previous one, and your data is preserved.
 
 ## 3. Show metadata and its accuracy
 
@@ -42,6 +46,8 @@ The App can open the page or the application of a streaming service and put the 
 ## 6. Your data
 
 Your library, watch marks and history are stored on your device. **Keeping this data safe is your responsibility**: uninstalling the App, clearing its data or resetting the device erases it irreversibly. A backup feature is provided for transferring and preserving it — please use it. The developer holds no copy of your data and cannot restore it.
+
+In the Windows version the data lives in a separate folder (`%LOCALAPPDATA%\Seriary`), and removing the program does **not** erase it — delete that folder by hand if you want it gone.
 
 ## 7. No paid features
 

@@ -4,11 +4,13 @@ title: "Privacy Policy — Seriary"
 
 # Privacy Policy — Seriary
 
-**Effective date:** August 4, 2026
+**Effective date:** August 20, 2026
 
 Seriary is an app that picks a random episode from your favourite TV shows and helps you open it in a streaming service. This policy explains what data the app uses and how it is handled.
 
 **In short: Seriary has no accounts, no server of its own, no ads and no analytics. Your library, watch marks and history are stored on your device only. The app goes online solely for show metadata and posters — and only when you ask it to.**
+
+**Scope.** This policy covers both versions of Seriary — for Android (phone, tablet, TV) and for Windows. They work the same way; wherever the desktop version differs, this text says so.
 
 ## 1. Who processes the data
 
@@ -29,6 +31,8 @@ Everything you create in the app — your list of shows, folders, watch marks, f
 | Network state | Checking whether a connection exists before going online |
 
 The app requests no other permissions. In particular, **no storage permission is requested**: saving and reading a backup uses the system file picker, which grants access only to the one file you point at.
+
+Permissions are an Android concept. **The Windows version requests none at all**: network access is granted by the system, and it touches your files only through the system file picker, and only the file you point at.
 
 ## 4. Third-party services the app contacts
 
@@ -59,13 +63,17 @@ A backup is a single file into which the app writes your library: shows, seasons
 
 That scope does not let the app read the rest of your files, photos or documents — it cannot see them. The app does not request your login, name or email address in the cloud account. The access token issued by the service is kept in the app's private storage on your device and is removed together with the app. You can revoke access at any time in the security settings of your Yandex account.
 
-**Android system backup** also applies: if it is enabled in your device settings, Android may copy the app's data to your cloud account under its own rules. That process is controlled by the operating system, not by the app.
+**On Windows the sign-in works the same way**, with one difference: the return from the browser is received on a temporary local address (`127.0.0.1`) that is reachable only from your own computer. It opens just before sign-in and closes right after it.
+
+**On Android, system backup** also applies: if it is enabled in your device settings, Android may copy the app's data to your cloud account under its own rules. That process is controlled by the operating system, not by the app.
 
 ## 7. Crash reports
 
 If the app crashes or freezes, it writes a technical report (error details, app version and device model) **to a file on your device**. The reports are listed under "About" → "Crash reports".
 
 **They are never sent anywhere automatically.** A report can only be sent by you, manually, by tapping an entry and choosing how to share it. You can clear the list at any time.
+
+All of this applies to the Android version. **The Windows version writes no crash reports** — it has no such section.
 
 ## 8. Opening streaming services
 
@@ -74,11 +82,17 @@ The "Find on …" button opens the page or the app of the service you chose (Kin
 - the **show title** is placed on the clipboard so that you do not have to type it into that service's search box;
 - everything after that happens **on that service's side** and is governed by its own privacy policy.
 
+**The "Browser" service.** If none of the listed services suits you, you can pick "Browser" and enter **your own** search address. The show title (and, if you enabled that setting, the episode designation) is then sent to a search at the address you set. The app suggests no resources, keeps no list of them and knows none; the only preset address is Yandex search.
+
+**In the Windows version** there are no streaming service apps, so the button always opens a page in your default browser.
+
 Seriary is not affiliated with these services, sends them no information about you, and has no access to your accounts or subscriptions there.
 
 ## 9. Data storage and deletion
 
 All app data lives in its private directory on the device. **Uninstalling the app erases it completely** — library, marks, history, stored translations, settings and cloud access tokens. You can also clear the data through Android ("Settings" → "Apps" → Seriary → "Storage").
+
+**On Windows this works differently.** The data lives in `%LOCALAPPDATA%\Seriary`, while the program itself sits elsewhere (`%LOCALAPPDATA%\Programs\Seriary` when installed, or wherever you unpacked the portable build). Removing the program does **not** erase your library and marks, so reinstalling keeps your data. To delete it completely, remove the `%LOCALAPPDATA%\Seriary` folder by hand.
 
 Backup files that you saved yourself are not removed when the app is uninstalled — they stay where you put them and remain under your control.
 
