@@ -15,6 +15,17 @@ title: "kotdikii — Документы / Legal"
   [Русский](seriary/terms.ru.html) ·
   [English](seriary/terms.en.html)
 
+## Deedary
+
+Дела на доске, а не в голове.
+
+- **Политика конфиденциальности / Privacy Policy:**
+  [Русский](deedary/privacy-policy.ru.html) ·
+  [English](deedary/privacy-policy.en.html)
+- **Пользовательское соглашение / Terms of Use:**
+  [Русский](deedary/terms.ru.html) ·
+  [English](deedary/terms.en.html)
+
 ## DeepCheck
 
 Проверка аппаратных компонентов смартфона.
