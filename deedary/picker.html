@@ -64,13 +64,17 @@ document.getElementById('open').onclick = () => {
   if (!token) return;
   // Два раздела: «Доступные мне» для приглашённого и «Мой диск» для владельца,
   // которому надо подключить журнал приглашённого.
+  // Список, а не плитки: в списке у файлов появляются флажки, и несколько штук
+  // выбираются одним заходом. В плитках на телефоне выбор часто ограничен одним.
   const shared = new google.picker.DocsView(google.picker.ViewId.DOCS)
     .setIncludeFolders(true)
     .setOwnedByMe(false)
+    .setMode(google.picker.DocsViewMode.LIST)
     .setLabel('Доступные мне');
   const mine = new google.picker.DocsView(google.picker.ViewId.DOCS)
     .setIncludeFolders(true)
     .setOwnedByMe(true)
+    .setMode(google.picker.DocsViewMode.LIST)
     .setLabel('Мой диск');
 
   new google.picker.PickerBuilder()
