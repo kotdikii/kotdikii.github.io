@@ -44,15 +44,19 @@
 // **Возврат — своей схемой `deedary://picker`.** Ключи выбранных файлов уходят
 // приложению, дальше оно само читает `meta.json` и заводит доску.
 
-const API_KEY = 'AIzaSyBpaRNKatL2KbkEwPgt0-HaSQwygmMZtoc';
+// Ключ приходит от приложения вместе с токеном — в исходнике страницы его нет.
+// Секретом он от этого не становится: браузер отправляет его Диску, и в отладчике
+// он виден. Защищают ключ его ограничения — домен и единственное разрешённое API;
+// здесь он отсутствует лишь затем, чтобы не лежать в открытом репозитории.
 const APP_ID = '830216793476';
 
 const params = new URLSearchParams(location.hash.slice(1));
 const token = params.get('token');
+const apiKey = params.get('key');
 const error = document.getElementById('error');
 
 function ready() {
-  if (!token) {
+  if (!token || !apiKey) {
     error.textContent = 'Страница открыта не из приложения: нет доступа к Диску.';
     return;
   }
@@ -77,7 +81,7 @@ document.getElementById('open').onclick = () => {
     .setLabel('Мой диск');
 
   new google.picker.PickerBuilder()
-    .setDeveloperKey(API_KEY)
+    .setDeveloperKey(apiKey)
     .setAppId(APP_ID)
     .setOAuthToken(token)
     .addView(shared)
