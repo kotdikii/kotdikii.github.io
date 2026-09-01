@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deedary — подключить доску</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0; padding: 32px 20px; max-width: 520px; margin-inline: auto;
+  }
+  h1 { font-size: 20px; margin: 0 0 12px; }
+  p { margin: 0 0 16px; opacity: .85; }
+  button {
+    font: inherit; padding: 12px 20px; border-radius: 10px; border: 0;
+    background: #3f6ad8; color: #fff; cursor: pointer;
+  }
+  .error { color: #b3261e; }
+</style>
+</head>
+<body>
+<h1>Подключить доску</h1>
+<p id="hint">Выберите файлы доски: <b>meta.json</b> и журналы участников. Они лежат
+   в папке, которой с вами поделились, — в Google Диске это раздел «Доступные мне».</p>
+<button id="open">Выбрать файлы</button>
+<p id="error" class="error"></p>
+
+<script src="https://apis.google.com/js/api.js" async defer onload="ready()"></script>
+<script>
+// Страница выбора файлов для Deedary (ТЗ §4.11, FR-SHARE-5).
+//
+// **Зачем она вообще.** У Google Picker нет Android-SDK — только JS-библиотека для
+// веб-страниц. А Picker нужен потому, что право `drive.file` пофайловое: доступа
+// к папке приложению мало, чтобы прочитать чужой журнал (проверено 01.09.2026).
+//
+// **Токен приходит `#`-фрагментом.** Фрагмент браузер на сервер не отправляет вовсе —
+// он виден только этому скрипту. Так приглашённый не проходит согласие второй раз,
+// и отдельный веб-клиент OAuth не нужен. Ключ Picker и номер проекта здесь открыто
+// и намеренно: ключ API у Google защищается ограничением по домену, а не тайной.
+//
+// **Возврат — своей схемой `deedary://picker`.** Ключи выбранных файлов уходят
+// приложению, дальше оно само читает `meta.json` и заводит доску.
+
+const API_KEY = 'AIzaSyBpaRNKatL2KbkEwPgt0-HaSQwygmMZtoc';
+const APP_ID = '830216793476';
+
+const params = new URLSearchParams(location.hash.slice(1));
+const token = params.get('token');
+const error = document.getElementById('error');
+
+function ready() {
+  if (!token) {
+    error.textContent = 'Страница открыта не из приложения: нет доступа к Диску.';
+    return;
+  }
+  gapi.load('picker');
+}
+
+document.getElementById('open').onclick = () => {
+  if (!token) return;
+  // Два раздела: «Доступные мне» для приглашённого и «Мой диск» для владельца,
+  // которому надо подключить журнал приглашённого.
+  const shared = new google.picker.DocsView(google.picker.ViewId.DOCS)
+    .setIncludeFolders(true)
+    .setOwnedByMe(false)
+    .setLabel('Доступные мне');
+  const mine = new google.picker.DocsView(google.picker.ViewId.DOCS)
+    .setIncludeFolders(true)
+    .setOwnedByMe(true)
+    .setLabel('Мой диск');
+
+  new google.picker.PickerBuilder()
+    .setDeveloperKey(API_KEY)
+    .setAppId(APP_ID)
+    .setOAuthToken(token)
+    .addView(shared)
+    .addView(mine)
+    // Файлов у доски несколько: журнал каждого участника плюс meta.json.
+    .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+    .setCallback(onPicked)
+    .build()
+    .setVisible(true);
+};
+
+function onPicked(data) {
+  if (data.action === google.picker.Action.CANCEL) {
+    backToApp('');
+    return;
+  }
+  if (data.action !== google.picker.Action.PICKED) return;
+  backToApp(data.docs.map(doc => doc.id).join(','));
+}
+
+// Возврат в приложение. Запасной путь обязателен: часть браузеров не пускает переход
+// на свою схему из скрипта и молча ничего не делает — тогда человек остаётся на пустой
+// странице, не понимая, что выбор уже сделан. Ссылку он нажмёт сам, и это сработает.
+function backToApp(ids) {
+  const url = 'deedary://picker?ids=' + encodeURIComponent(ids);
+  location.href = url;
+  setTimeout(() => {
+    document.getElementById('hint').innerHTML =
+      'Файлы выбраны. Если приложение не открылось само — ' +
+      '<a href="' + url + '">откройте Deedary</a>.';
+    document.getElementById('open').textContent = 'Выбрать другие файлы';
+  }, 1500);
+}
+</script>
+</body>
+</html>
