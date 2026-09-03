@@ -74,14 +74,23 @@ document.getElementById('open').onclick = () => {
   // среди них нужный — работа, которую можно не делать.
   // Список, а не плитки: в списке у файлов появляются флажки, и несколько штук
   // выбираются одним заходом. В плитках на телефоне выбор часто ограничен одним.
+  //
+  // Одного имени мало: резервная копия лежит в той же папке и тоже зовётся «deedary…»,
+  // поэтому по слову она находится вместе с досками. Разводит их тип: журнал доски —
+  // `text/plain` (`.jsonl`), копия — `application/json`. Тип проставляет само
+  // приложение при загрузке, так что отбор по нему точен и не зависит от имени.
+  const BOARD_MIME = 'text/plain';
+
   const shared = new google.picker.DocsView(google.picker.ViewId.DOCS)
     .setOwnedByMe(false)
     .setMode(google.picker.DocsViewMode.LIST)
+    .setMimeTypes(BOARD_MIME)
     .setQuery('Deedary')
     .setLabel('Доступные мне');
   const mine = new google.picker.DocsView(google.picker.ViewId.DOCS)
     .setOwnedByMe(true)
     .setMode(google.picker.DocsViewMode.LIST)
+    .setMimeTypes(BOARD_MIME)
     .setQuery('Deedary')
     .setLabel('Мой диск');
 
