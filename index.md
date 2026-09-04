@@ -31,23 +31,23 @@ title: "kotdikii — Документы / Legal"
 Проверка аппаратных компонентов смартфона.
 
 - **Политика конфиденциальности / Privacy Policy:**
-  [Русский](docs/privacy-policy.ru.html) ·
-  [English](docs/privacy-policy.en.html) ·
-  [Հայերեն](docs/privacy-policy.am.html) ·
-  [Español](docs/privacy-policy.es.html) ·
-  [Nederlands](docs/privacy-policy.nl.html)
+  [Русский](deepcheck/privacy-policy.ru.html) ·
+  [English](deepcheck/privacy-policy.en.html) ·
+  [Հայերեն](deepcheck/privacy-policy.am.html) ·
+  [Español](deepcheck/privacy-policy.es.html) ·
+  [Nederlands](deepcheck/privacy-policy.nl.html)
 - **Пользовательское соглашение / Terms of Use:**
-  [Русский](docs/terms.ru.html) ·
-  [English](docs/terms.en.html) ·
-  [Հայերեն](docs/terms.am.html) ·
-  [Español](docs/terms.es.html) ·
-  [Nederlands](docs/terms.nl.html)
+  [Русский](deepcheck/terms.ru.html) ·
+  [English](deepcheck/terms.en.html) ·
+  [Հայերեն](deepcheck/terms.am.html) ·
+  [Español](deepcheck/terms.es.html) ·
+  [Nederlands](deepcheck/terms.nl.html)
 - **Руководство / Guide:**
-  [Русский](docs/guide.ru.html) ·
-  [English](docs/guide.en.html) ·
-  [Հայերեն](docs/guide.am.html) ·
-  [Español](docs/guide.es.html) ·
-  [Nederlands](docs/guide.nl.html)
+  [Русский](deepcheck/guide.ru.html) ·
+  [English](deepcheck/guide.en.html) ·
+  [Հայերեն](deepcheck/guide.am.html) ·
+  [Español](deepcheck/guide.es.html) ·
+  [Nederlands](deepcheck/guide.nl.html)
 
 ---
 
