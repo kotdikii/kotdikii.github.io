@@ -4,7 +4,7 @@ title: "Privacy Policy — Deedary"
 
 # Privacy Policy — Deedary
 
-**Effective date:** 8 September 2026
+**Effective date:** 7 October 2026
 
 Deedary is a kanban board on your phone: columns and tasks, checklists, due dates with reminders, time tracking and statistics. A board can be opened up to other people through your Google Drive. This policy explains what data the app uses and how it handles it.
 
@@ -76,7 +76,7 @@ A board can be opened up to other people. This is an **optional add-on**: until 
 
 **What never goes there.** Your reminders, the timer running right now, collapsed columns, your folders and the order of boards in your list, app settings, crash reports and, of course, your personal boards.
 
-**Your name.** So that the board can show who picked up a task, the app asks Google Drive for **the name in your profile** and writes it into the board file. Your email address is not written into the board file.
+**Your name.** So that the board can show who picked up a task, the app asks Google Drive for **the name in your profile** and writes it into the board file. Next to the name it writes **your Drive permission ID** (`permissionId`), an internal code Google uses for your account in sharing settings. It lets the app recognise you after a reinstall and list only people who have access to the board as possible assignees. Your email address is not written into the board file.
 
 **Inviting and revoking.** You type a member's address, and the app hands it to Google Drive as a permission on the file; the invitation email is sent by **Google itself** — the app has no mailing of its own and never will. The app keeps **no member list**: the "Members" dialog shows what Drive returned (address, name and role) and stores none of it. "Revoke" removes the permission on Drive's side.
 
