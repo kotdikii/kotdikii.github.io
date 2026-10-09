@@ -26,6 +26,17 @@ title: "kotdikii — Документы / Legal"
   [Русский](deedary/terms.ru.html) ·
   [English](deedary/terms.en.html)
 
+## Linary
+
+Одна линия через все числа.
+
+- **Политика конфиденциальности / Privacy Policy:**
+  [Русский](linary/privacy-policy.ru.html) ·
+  [English](linary/privacy-policy.en.html)
+- **Пользовательское соглашение / Terms of Use:**
+  [Русский](linary/terms.ru.html) ·
+  [English](linary/terms.en.html)
+
 ## DeepCheck
 
 Проверка аппаратных компонентов смартфона.
