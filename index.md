@@ -28,7 +28,7 @@ title: "kotdikii — Документы / Legal"
 
 ## Linary
 
-Одна линия через все числа.
+Одна линия через все числа. [О приложении / About](linary/)
 
 - **Политика конфиденциальности / Privacy Policy:**
   [Русский](linary/privacy-policy.ru.html) ·

@@ -4,11 +4,11 @@ title: "Privacy Policy — Linary"
 
 # Privacy Policy — Linary
 
-**Effective date:** 9 October 2026
+**Effective date:** 13 October 2026
 
 Linary is a "one line" puzzle: draw a line from 1 through every number in order, visiting each cell exactly once. The app has a daily puzzle with a streak and a calendar, the chapters of the Path, a timed Rush and an endless mode. This policy explains what data the app uses and how it handles it.
 
-**In short: Linary has no accounts, no server of its own and no analytics. Your progress is stored on your device. The app is free because it shows ads: they are served by the Yandex Advertising Network, and the Yandex module built into the app receives information about your device (section 5). Apart from ads, the app goes online only to check today's date (section 4).**
+**In short: Linary has no accounts of its own, no server of its own and no analytics. Your progress is stored on your device. If your phone has Google Play Games, the app sends your achievements and your Rush record there (section 6). The app is free because it shows ads: they are served by the Yandex Advertising Network, and the Yandex module built into the app receives information about your device (section 5). Apart from ads and Play Games, the app goes online only to check today's date (section 4).**
 
 ## 1. Who processes the data
 
@@ -23,15 +23,15 @@ The app's private folder on your device holds:
 
 - **progress**: solved daily puzzles (the day, the solving time and whether a hint was used), your day streak and streak freezes, completed chapter levels, the count and best time in endless mode, your Rush record;
 - **settings**: language, theme, palette, sound, vibration, line style, your answer about personalised ads;
-- **crash reports** (section 7).
+- **crash reports** (section 8).
 
-The data the Yandex ad module receives is described in section 5. The app does not pass your progress to it, only what is needed to show ads.
+The data the Yandex ad module receives is described in section 5. The app does not pass your progress to it, only what is needed to show ads. What goes to Google Play Games is described in section 6.
 
 ## 3. Permissions
 
 | Permission | Why it is needed |
 |---|---|
-| Internet | Loading ads and checking today's date (section 4) |
+| Internet | Loading ads, checking today's date (section 4) and Google Play Games (section 6) |
 | Network state | The ad module checks for a connection before loading a video |
 | Advertising ID | Required by the Yandex ad module (section 5) |
 | Install referrer | The ad module asks Google Play where the app was installed from |
@@ -69,34 +69,42 @@ The developer does not receive this data. The only thing the app learns from the
 - **In the European Economic Area, the United Kingdom and Switzerland**, the app asks on first launch whether ads may be personalised. Your answer does not affect the game. Without your consent ads are still shown, but they are not personalised. You can change your answer at any time: Settings → Personalised ads.
 - **In other countries**, personalised ads are controlled in the Android settings: Settings → Privacy (or Google) → Ads. There you can reset or delete your advertising ID.
 
-## 6. Sharing a result
+## 6. Google Play Games
+
+If your phone has Google Play services and you are signed in to Google Play Games, the app unlocks **achievements** there (for example, "7-day streak" or "chapter completed") and submits your **Rush record** to a leaderboard. Sign-in is handled by Google's service itself; the app never sees your credentials. Achievements are also granted for what you completed earlier: the app checks them against the progress on your device.
+
+Only achievement unlocks and the number of puzzles solved in your best Rush are sent to Google. Puzzles, solutions, times and settings are not sent. Your Play Games profile, achievements and leaderboard position are visible to you and, depending on your profile settings, to other players. This data is processed by **Google** under its own rules: [Google Privacy Policy](https://policies.google.com/privacy).
+
+Play Games is optional: without it, without signing in, or on a phone without Google services, the game and its in-game rewards work the same. You can manage your profile and delete your Play Games data in the Google Play Games app → Settings.
+
+## 7. Sharing a result
 
 After solving the daily puzzle you can share your result: the puzzle number, level, time and streak. This happens **only when you tap**: the text goes to the system Share sheet, and you choose the recipient. The text does not contain the solution.
 
-## 7. Crash reports
+## 8. Crash reports
 
 If the app crashes or freezes, it writes a technical report (error details, app version and device model) **to a file on your device**. Reports are shown under About → Crash reports.
 
 **They are never sent automatically.** You can send a report only by hand: tap an entry and choose how to send it. The list of reports can be cleared at any time.
 
-## 8. System backup
+## 9. System backup
 
 If Android backup is turned on in your device settings, the system may copy the app's progress and settings to your Google account and move them to a new phone under its own rules. Crash reports are not included. This process is controlled by the operating system, not by the app.
 
-## 9. Storage and deletion
+## 10. Storage and deletion
 
 All of the app's data lives in its private folder on the device. **Uninstalling the app erases it completely**: progress, streak, settings and crash reports. You can also clear the data with Android: Settings → Apps → Linary → Storage.
 
-The data received by the ad module is stored and deleted by Yandex under its own policy (section 5).
+The data received by the ad module is stored and deleted by Yandex under its own policy (section 5). Achievements and records in Google Play Games live in your Play Games profile and are not erased when you uninstall the app (section 6).
 
-## 10. Children
+## 11. Children
 
 The app is not intended for children under 13. The ad module it uses is not designed for a child audience.
 
-## 11. Changes to this policy
+## 12. Changes to this policy
 
 If the policy changes, we will update the text and the effective date on this page.
 
-## 12. Contact
+## 13. Contact
 
 For any privacy questions: **kotdikii@gmail.com**
