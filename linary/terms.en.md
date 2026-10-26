@@ -4,7 +4,7 @@ title: "Terms of Use — Linary"
 
 # Terms of Use — Linary
 
-**Effective date:** 9 October 2026
+**Effective date:** 26 October 2026
 
 These Terms of Use (the "Terms") govern your use of the Linary app (the "App"). By installing and using the App you accept these Terms. If you do not agree with them, do not use the App.
 
@@ -33,16 +33,22 @@ Your progress and settings are stored on your device. **You are responsible for 
 
 ## 5. Ads
 
-The App is free and is paid for by ads. They are served by the Yandex Advertising Network.
+The App is free and is paid for by ads. They are served by the Yandex Advertising Network. In the RuStore version, Premium turns off full-screen ads (section 6); rewarded videos remain available with it.
 
 - **Rewarded videos are optional.** The reward (a hint, a one-day try-on of a line style, a streak freeze) is given only for a video watched to the end. If a video fails to load, stops, or you close it, there is no reward, and nothing is taken from you.
 - **Full-screen ads** are shown between puzzles, never while you are solving.
 - **Yandex chooses and shows the ad content.** The Developer has no influence over specific ads and is not responsible for their content. You can report an ad through the ad itself or to Yandex.
 - **Rewards are part of the game, not property.** Hints, try-ons and freezes have no monetary value, do not move between devices and are not returned once used.
 
-## 6. No paid features
+## 6. Paid features
 
-The App contains no paid features, subscriptions or in-app purchases.
+Paid features are available only in the RuStore version of the App. The Google Play version contains none.
+
+- **Premium** turns off full-screen ads between puzzles and gives two free hints per puzzle instead of one. You can get it in two ways: a **monthly subscription** or a **one-time Linary Pro purchase** (Premium with no end date).
+- **The subscription renews automatically** every month until you cancel it. You can cancel it in RuStore at any time; Premium stays active until the end of the paid period.
+- **Coin packs** top up your in-game balance. Coins are spent on line styles and solve finales. They have no monetary value outside the App, cannot be exchanged for money and do not move between devices. **Coins are stored in the progress on your device**: uninstalling the App or clearing its data also erases bought coins, and they cannot be restored (section 3). Premium is restored from your RuStore account after a reinstall.
+- **RuStore handles the payment** under its own rules. Prices are shown in the App's shop before you pay. Refunds and payment disputes are governed by RuStore's rules; you can also contact the developer about a purchase (section 13).
+- What Premium includes, prices and coin packs may change in updates. A subscription period already paid for and a Linary Pro purchase keep what was promised at the time of purchase.
 
 ## 7. Game rules and results
 
